@@ -6,6 +6,10 @@
     padding: 6rem 4rem 4rem;
     position: relative;
     overflow: hidden;
+    animation: scroll-an linear;
+    animation-timeline: view();
+    animation-range: entry 0% exit -30%;
+    
 }
 
 .contact-container {
@@ -18,10 +22,32 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    
 }
+@keyframes scroll-an {
+    from {
+        transform: translateY(90px) scale(0.75);
+        opacity: 0;
+        filter: blur(5px);
+        letter-spacing: 5px;
+    }
 
+    60% {
+        transform: translateY(-8px) scale(1.03);
+
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+        letter-spacing: 0px;
+
+    }
+}
 .contact-left {
     padding-right: 2rem;
+    
 }
 
 .contact-left .main-title {

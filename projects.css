@@ -17,6 +17,9 @@
     padding: 6rem 4rem 0rem 4rem;
     position: relative;
     overflow: hidden;
+    animation: scroll-an linear;
+    animation-timeline: view();
+    animation-range: entry 0% exit -75%;
 }
 
 .projects-container {
@@ -24,14 +27,37 @@
     margin: 0 auto;
     position: relative;
     z-index: 1;
-}
 
+}
+@keyframes scroll-an {
+    from {
+        transform: translateY(90px) scale(0.75);
+        opacity: 0;
+        filter: blur(5px);
+        letter-spacing: 5px;
+    }
+
+    60% {
+        transform: translateY(-8px) scale(1.03);
+
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+        letter-spacing: 0px;
+
+    }
+}
 .projects-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
 }
+
+
 
 .projects-header .section-tag {
     justify-content: center;

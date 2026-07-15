@@ -70,6 +70,28 @@ body {
 /* ================================================= */
 /* =================Navigation HEADER================ */
 /* ================================================= */
+div.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform-origin: left;
+    animation: anim-progress 2s linear both;
+    animation-timeline: scroll();
+}
+@keyframes anim-progress{
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+
 nav.nav-header {
     position: fixed;
     top: 0;
